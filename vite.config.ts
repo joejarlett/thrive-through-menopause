@@ -12,7 +12,8 @@ export default defineConfig({
 				runes: ({ filename }) =>
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
-			adapter: adapter()
+			// Pinned so the build doesn't depend on whichever Node the machine happens to run.
+			adapter: adapter({ runtime: 'nodejs22.x' })
 		})
 	]
 });

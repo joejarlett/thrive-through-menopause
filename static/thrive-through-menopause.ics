@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Thrive Through Menopause//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:thrive-through-menopause-2026-10-18@thrive-through-menopause.vercel.app
+DTSTAMP:20260809T120000Z
+DTSTART:20261018T110000Z
+DTEND:20261018T160000Z
+SUMMARY:Thrive Through Menopause — A Bristol Menopause & Healing Fair
+DESCRIPTION:Exhibitions, yoga, workshops, wellbeing, wellness stands and expert talks. Tickets: https://buytickets.at/thebristolfashionshow/2333887
+LOCATION:Ham Green House, Chapel Pill Lane, Pill, Bristol BS20 0HH
+URL:https://thrive-through-menopause.vercel.app
+END:VEVENT
+END:VCALENDAR

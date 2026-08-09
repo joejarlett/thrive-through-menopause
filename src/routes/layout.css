@@ -1,21 +1,35 @@
 @import 'tailwindcss';
 
+/* Self-hosted so no request leaves for a font CDN. */
+@import '@fontsource-variable/playfair-display';
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/500.css';
+@import '@fontsource/poppins/600.css';
+@import '@fontsource/quicksand/500.css';
+@import '@fontsource/quicksand/600.css';
+@import '@fontsource/quicksand/700.css';
+
 @theme {
 	--color-lilac: #e2a9f0;
+	--color-lilac-tint: #f0dbf7;
 	--color-lilac-band: #dc9dee;
 	--color-lilac-pill: #c583da;
 	--color-lilac-petal: #d491ec;
+	--color-surface: #fbf3fd;
 	--color-blob: #d180e9;
 	--color-contour: #784c7d;
+	--color-rule: #c98fdd;
 	--color-ink: #0b0409;
+	--color-ink-muted: #57394f;
 
-	--font-display: 'Playfair Display', 'Times New Roman', serif;
+	--font-display: 'Playfair Display Variable', 'Playfair Display', 'Times New Roman', serif;
 	--font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
 	--font-rounded: 'Quicksand', 'Poppins', ui-rounded, sans-serif;
 }
 
 html {
 	background-color: var(--color-lilac);
+	scroll-behavior: smooth;
 	-webkit-text-size-adjust: 100%;
 }
 
@@ -27,4 +41,10 @@ body {
 ::selection {
 	background: var(--color-ink);
 	color: var(--color-lilac);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
 }
