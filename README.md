@@ -28,18 +28,23 @@ npm run build      # production build (Vercel adapter, runtime pinned to nodejs2
 | `docs/content-todo.md`                    | Every placeholder still to be replaced, and where.                                                                                |
 | `docs/next-steps.md`                      | Booking/payment recommendation and the wider site review.                                                                         |
 
-## Palettes
+## Two versions
 
-Two colourways, selected by route:
+- **`/`** — the poster reproduction. Lilac, Playfair Display and Poppins, every dimension
+  measured from the printed artwork.
+- **`/ivory`** — a designed treatment of the same content. Ivory ground, purple lotus, and
+  its own type: **Fraunces** (soft optical serif, `SOFT` axis dialled up) for the voice and
+  **Mulish** for reading. The wordmark sits clear of the lotus rather than behind it, the
+  timetable is a timeline, the FAQ is an accordion, and sections reveal gently on scroll.
+  Marked `noindex` — it exists so the two can be compared before choosing.
 
-- **`/`** — lilac, matching the printed poster.
-- **`/ivory`** — ivory ground with the lotus, blobs, contours and date band in purple.
-  Marked `noindex`; it exists so the two can be compared before choosing.
+Both read from the same `site.ts`. The ivory design is self-contained in
+`src/lib/components/IvoryPage.svelte` with its own tokens, so neither version can break the
+other. To make it the live site, point `src/routes/+page.svelte` at `IvoryPage` and move the
+`noindex`.
 
-Both are the same components. The palette is a set of token overrides in
-`src/routes/layout.css` under `[data-palette='ivory']`, applied by a wrapper in
-`+layout.svelte`. To make the ivory version the live one, change that wrapper's default and
-move the `noindex` — nothing else needs touching.
+Motion (`src/lib/actions/reveal.ts`, the lotus draw-on, the sticky booking bar) is all
+disabled under `prefers-reduced-motion`.
 
 ## Tickets
 

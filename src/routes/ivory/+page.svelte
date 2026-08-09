@@ -1,10 +1,10 @@
 <script lang="ts">
-	import EventPage from '$lib/components/EventPage.svelte';
+	import IvoryPage from '$lib/components/IvoryPage.svelte';
 </script>
 
-<!-- Alternative palette, for comparison only — not part of the public site. -->
+<!-- Design variant, for comparison — not part of the public site yet. -->
 <svelte:head>
 	<meta name="robots" content="noindex" />
 </svelte:head>
 
-<EventPage />
+<IvoryPage />
