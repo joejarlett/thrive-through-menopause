@@ -1,5 +1,8 @@
 <script lang="ts">
-	import EventPage from '$lib/components/EventPage.svelte';
+	import SeoHead from '$lib/components/SeoHead.svelte';
+	import IvoryPage from '$lib/components/IvoryPage.svelte';
 </script>
 
-<EventPage />
+<SeoHead />
+
+<IvoryPage />

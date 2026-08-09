@@ -2,9 +2,10 @@
 
 Event site for a Bristol menopause and healing fair — 18 October, Ham Green House.
 
-The home page opens with a faithful reproduction of the printed poster, then continues into
-the day's details. Every dimension in the poster is a percentage of its own width, measured
-from the artwork (1131 × 1600), so the composition holds identically at any size.
+The site takes its identity from the printed poster — lotus, wordmark, purple — and gives it
+room to breathe on screen. The poster itself is reproduced exactly at `/poster`, where every
+dimension is a percentage of its own width, measured from the artwork (1131 × 1600), so the
+composition holds identically at any size.
 
 ## Running it
 
@@ -30,18 +31,16 @@ npm run build      # production build (Vercel adapter, runtime pinned to nodejs2
 
 ## Two versions
 
-- **`/`** — the poster reproduction. Lilac, Playfair Display and Poppins, every dimension
-  measured from the printed artwork.
-- **`/ivory`** — a designed treatment of the same content. Ivory ground, purple lotus, and
-  its own type: **Fraunces** (soft optical serif, `SOFT` axis dialled up) for the voice and
-  **Mulish** for reading. The wordmark sits clear of the lotus rather than behind it, the
-  timetable is a timeline, the FAQ is an accordion, and sections reveal gently on scroll.
-  Marked `noindex` — it exists so the two can be compared before choosing.
+- **`/`** — the site. Ivory ground, purple lotus, **Fraunces** (soft optical serif) for the
+  voice and **Mulish** for reading. Full-height hero where the lotus draws itself, one shared
+  left edge across sections, the timetable as a timeline, the FAQ as an accordion.
+- **`/poster`** — the literal reproduction of the printed poster: lilac, Playfair Display and
+  Poppins, every dimension measured from the artwork. Kept for reference and `noindex`ed so
+  it doesn't compete in search. `/ivory` 308-redirects to `/`.
 
-Both read from the same `site.ts`. The ivory design is self-contained in
-`src/lib/components/IvoryPage.svelte` with its own tokens, so neither version can break the
-other. To make it the live site, point `src/routes/+page.svelte` at `IvoryPage` and move the
-`noindex`.
+Both read from the same `src/lib/site.ts`, and share page metadata via
+`src/lib/components/SeoHead.svelte`. Otherwise they're independent — the ivory design carries
+its own tokens in `IvoryPage.svelte`, so neither version can break the other.
 
 Motion (`src/lib/actions/reveal.ts`, the lotus draw-on, the sticky booking bar) is all
 disabled under `prefers-reduced-motion`.

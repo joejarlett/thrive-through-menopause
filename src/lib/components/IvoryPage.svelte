@@ -1,9 +1,7 @@
 <script lang="ts">
 	import LotusMark from './LotusMark.svelte';
 	import { reveal } from '$lib/actions/reveal';
-	import { site, event, strands, timetable, exhibitors, faqs } from '$lib/site';
-
-	const description = `${site.strapline} — ${event.dateLabel}, ${event.timeLabel} at ${event.venue}, ${event.street}, ${event.postcode}.`;
+	import { event, strands, timetable, exhibitors, faqs } from '$lib/site';
 
 	/** The booking bar only earns its place once the hero's own CTA has scrolled away. */
 	let pastHero = $state(false);
@@ -16,11 +14,6 @@
 		return { destroy: () => observer.disconnect() };
 	}
 </script>
-
-<svelte:head>
-	<title>{site.title} — {site.strapline}</title>
-	<meta name="description" content={description} />
-</svelte:head>
 
 <div class="ivory">
 	<a class="skip" href="#about">Skip to event details</a>
