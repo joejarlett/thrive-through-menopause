@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-lilac: #e2a9f0;
+	--color-lilac-band: #dc9dee;
+	--color-lilac-pill: #c583da;
+	--color-lilac-petal: #d491ec;
+	--color-blob: #d180e9;
+	--color-contour: #784c7d;
+	--color-ink: #0b0409;
+
+	--font-display: 'Playfair Display', 'Times New Roman', serif;
+	--font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+	--font-rounded: 'Quicksand', 'Poppins', ui-rounded, sans-serif;
+}
+
+html {
+	background-color: var(--color-lilac);
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	color: var(--color-ink);
+	font-family: var(--font-sans);
+}
+
+::selection {
+	background: var(--color-ink);
+	color: var(--color-lilac);
+}
