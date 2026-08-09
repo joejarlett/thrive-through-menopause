@@ -22,9 +22,31 @@
 	--color-ink: #0b0409;
 	--color-ink-muted: #57394f;
 
+	--lotus-stroke-width: 11;
+
 	--font-display: 'Playfair Display Variable', 'Playfair Display', 'Times New Roman', serif;
 	--font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
 	--font-rounded: 'Quicksand', 'Poppins', ui-rounded, sans-serif;
+}
+
+/*
+ * Alternative palette: ivory ground, with the lotus, blobs, contours and the
+ * date band carrying the purple. Same token names, so every component follows.
+ */
+[data-palette='ivory'] {
+	--color-lilac: #f7f1e3;
+	--color-lilac-tint: #f1ebf7;
+	--color-lilac-band: #e9dbf5;
+	--color-lilac-pill: #e2cff3;
+	--color-lilac-petal: #ab7fd0;
+	--color-surface: #ffffff;
+	--color-blob: #c9a7e4;
+	--color-contour: #6b3f8f;
+	--color-rule: #d6c3e6;
+	--color-ink: #2a1b33;
+	--color-ink-muted: #5d4a6b;
+
+	--lotus-stroke-width: 8;
 }
 
 html {
@@ -36,6 +58,11 @@ html {
 body {
 	color: var(--color-ink);
 	font-family: var(--font-sans);
+}
+
+/* The palette lives on a wrapper, so the root needs telling separately. */
+html:has([data-palette='ivory']) {
+	background-color: #f7f1e3;
 }
 
 ::selection {

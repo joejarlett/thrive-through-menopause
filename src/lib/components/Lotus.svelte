@@ -33,7 +33,6 @@
 	<g
 		transform="translate(450 360)"
 		stroke="var(--color-lilac-petal)"
-		stroke-width="11"
 		stroke-linecap="round"
 		stroke-linejoin="round"
 	>
@@ -45,3 +44,13 @@
 		{/each}
 	</g>
 </svg>
+
+<style>
+	/*
+	 * Stroke weight is a token: a tonal lotus can afford a thick line, a
+	 * high-contrast one has to thin out so the wordmark still reads on top.
+	 */
+	g {
+		stroke-width: var(--lotus-stroke-width, 11);
+	}
+</style>

@@ -1,42 +1,48 @@
-# sv
+# Thrive Through Menopause
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Event site for a Bristol menopause and healing fair — 18 October, Ham Green House.
 
-## Creating a project
+The home page opens with a faithful reproduction of the printed poster, then continues into
+the day's details. Every dimension in the poster is a percentage of its own width, measured
+from the artwork (1131 × 1600), so the composition holds identically at any size.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Running it
 
-```sh
-# create a new project
-npx sv create my-app
+```bash
+npm install
+npm run dev        # http://localhost:5173
+npm run check      # svelte-check
+npm run build      # production build (Vercel adapter, runtime pinned to nodejs22.x)
 ```
 
-To recreate this project with the same configuration:
+## Where things live
 
-```sh
-# recreate this project
-npx sv@0.17.0 create --template minimal --types ts --add prettier eslint tailwindcss="plugins:none" sveltekit-adapter="adapter:vercel" ai-tools="ide:claude-code+delivery:plugin" --install npm .
-```
+|                                           |                                                                                                                                   |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `src/lib/site.ts`                         | **All copy and event data.** Dates, venue, ticket link, strands, timetable, exhibitors, FAQs. Change content here, not in markup. |
+| `src/lib/components/Poster.svelte`        | The poster hero. Dimensions in `cqw` — see the comment at the top of its stylesheet before touching numbers.                      |
+| `src/lib/components/EventPage.svelte`     | The whole page: poster plus every content section.                                                                                |
+| `src/lib/components/Lotus.svelte`         | The lotus mark, drawn as SVG.                                                                                                     |
+| `src/lib/components/ContourCorner.svelte` | Bottom-right blob and contour rings.                                                                                              |
+| `src/routes/layout.css`                   | Design tokens for both palettes.                                                                                                  |
+| `docs/content-todo.md`                    | Every placeholder still to be replaced, and where.                                                                                |
+| `docs/next-steps.md`                      | Booking/payment recommendation and the wider site review.                                                                         |
 
-## Developing
+## Palettes
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Two colourways, selected by route:
 
-```sh
-npm run dev
+- **`/`** — lilac, matching the printed poster.
+- **`/ivory`** — ivory ground with the lotus, blobs, contours and date band in purple.
+  Marked `noindex`; it exists so the two can be compared before choosing.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Both are the same components. The palette is a set of token overrides in
+`src/routes/layout.css` under `[data-palette='ivory']`, applied by a wrapper in
+`+layout.svelte`. To make the ivory version the live one, change that wrapper's default and
+move the `noindex` — nothing else needs touching.
 
-## Building
+## Tickets
 
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Ticketing is handled by the organiser's existing **Ticket Tailor** event; the poster's QR
+code encodes the same URL. The site links out rather than taking payment. Reasoning is in
+[docs/next-steps.md](docs/next-steps.md).
