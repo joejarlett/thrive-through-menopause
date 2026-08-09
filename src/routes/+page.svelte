@@ -6,6 +6,38 @@
 
 	const mapsUrl =
 		'https://www.google.com/maps/search/?api=1&query=Ham+Green+House%2C+Chapel+Pill+Lane%2C+Bristol+BS20+0HH';
+
+	/** The event's existing Ticket Tailor page — the destination the poster's QR encodes. */
+	const ticketsUrl = 'https://buytickets.at/thebristolfashionshow/2333887';
+
+	const eventSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'Event',
+		name: 'Thrive Through Menopause — A Bristol Menopause & Healing Fair',
+		description:
+			'A Bristol menopause and healing fair: exhibitions, yoga, workshops, wellbeing, wellness stands and expert talks.',
+		startDate: '2026-10-18T12:00:00+01:00',
+		endDate: '2026-10-18T17:00:00+01:00',
+		eventStatus: 'https://schema.org/EventScheduled',
+		eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+		location: {
+			'@type': 'Place',
+			name: 'Ham Green House',
+			address: {
+				'@type': 'PostalAddress',
+				streetAddress: 'Chapel Pill Lane',
+				addressLocality: 'Bristol',
+				postalCode: 'BS20 0HH',
+				addressCountry: 'GB'
+			}
+		},
+		image: ['https://thrive-through-menopause.vercel.app/og.jpg'],
+		offers: {
+			'@type': 'Offer',
+			url: 'https://buytickets.at/thebristolfashionshow/2333887',
+			availability: 'https://schema.org/InStock'
+		}
+	};
 </script>
 
 <svelte:head>
@@ -23,6 +55,11 @@
 		content="18 October, 12–5pm at Ham Green House, Chapel Pill Lane, BS20 0HH."
 	/>
 	<meta property="og:type" content="website" />
+	<meta property="og:image" content="/og.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta name="twitter:card" content="summary_large_image" />
+	{@html `<script type="application/ld+json">${JSON.stringify(eventSchema)}</` + `script>`}
 </svelte:head>
 
 <main class="poster">
@@ -79,13 +116,14 @@
 
 		<!-- Footer -->
 		<footer class="footer">
-			<img
-				class="qr"
-				src="/qr.png"
-				alt="Scan for event details"
-				width="324"
-				height="328"
-			/>
+			<a class="qr" href={ticketsUrl} target="_blank" rel="noopener">
+				<img
+					src="/qr.png"
+					alt="Book tickets for Thrive Through Menopause"
+					width="324"
+					height="328"
+				/>
+			</a>
 			<div class="logos">
 				<img class="tbfs" src="/tbfs.png" alt="TBFS" width="201" height="126" />
 				<img
@@ -310,9 +348,14 @@
 
 	.qr {
 		width: 13cqw;
-		height: auto;
 		display: block;
 		background: #fff;
+	}
+
+	.qr img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 
 	.logos {
