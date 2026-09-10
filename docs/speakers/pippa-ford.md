@@ -2,9 +2,12 @@
 Dramatherapist | Ecotherapy | EMDR | Creative Clinical Supervisor | Yoga & Mindfulness Therapy**
 
 **Website:** [https://www.pippaford.co.uk](https://www.pippaford.co.uk)
-_(Her professional site — the fuller description of the practice. Note it still reads
-"currently in training as an Eco-Depth Practitioner"; she qualified as of September 2026,
-so that site needs updating. Source: `~/Documents/projects/pippaford.co.uk/src/lib/content.ts`.)_
+_(Her professional site — the fuller description of the practice, which still reads
+"currently in training as an Eco-Depth Practitioner". Her training completes in late
+September 2026, before the 18 October event, and she has asked to be presented as
+qualified for it — so the event site follows the "ecotherapist" wording she used in the
+bio below. Worth updating pippaford.co.uk to match once she qualifies.
+Source: `~/Documents/projects/pippaford.co.uk/src/lib/content.ts`.)_
 
 Pippa is a creative arts psychotherapist and ecotherapist whose work is grounded in psychodynamic and humanistic frameworks. Integrating creative, Jungian, Internal Family Systems (IFS), and somatic approaches alongside a background in yoga, mindfulness therapy, and EMDR, Pippa's practice honours the complexity of each person's story from a depth-oriented, relational, and compassionate stance. She weaves nature-based wisdom and ecological consciousness into the therapeutic space to support deeper connection, integration, and transformation.
 
