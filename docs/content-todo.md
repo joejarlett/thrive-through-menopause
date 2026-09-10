@@ -18,14 +18,31 @@ one file, no hunting through markup.
 
 ## Fill in as they confirm
 
-| What                      | Where                                 | Currently                                                                                                                                                                                                                 |
-| ------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Talk timetable**        | `timetable`                           | Real slot times with "Speaker to be confirmed" against each. Replace titles and names as booked; the section already carries a note saying the running order is indicative.                                               |
+| What                      | Where                                 | Currently                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Talk timetable**        | `timetable`                           | Real slot times with "Speaker to be confirmed" against each. Replace titles and names as booked; the section already carries a note saying the running order is indicative.                                                                                                                                                                                                                             |
 | **Speaker bios**          | `speakers`                            | Eight of the sixteen names on the organisers' Speaker Info sheet. Lisa Hunnego has no bio yet and renders as a photo and name; Julie Britton's card is written from her own words because what she sent is an Instagram reel script, not a bio. Eight more speakers have neither bio nor headshot: Ruth, Ellen Szide, Izabela Collins, Dr Zoe & Pauline, Joey, Alex Francis, Annastasia, Fabien Valles. |
-| **Exhibitor list**        | `exhibitors`                          | Eight example tiles reading "Exhibitor name" with a category. Replace with real names, and add `url` to make a tile a link. Emptying the array switches the section to a "line-up announced shortly" state automatically. |
-| **Parking and access**    | FAQ + the Access panel under Visiting | Written as "being confirmed" with an invitation to get in touch.                                                                                                                                                          |
-| **Organiser biographies** | Organisers section in `+page.svelte`  | One factual sentence about TBFS and NCIM; no personal bios.                                                                                                                                                               |
-| **Strand descriptions**   | `strands`                             | Written to be true of a fair of this kind and safe to publish as-is, but they're my words — worth her eye before launch.                                                                                                  |
+| **Exhibitor list**        | `exhibitors`                          | Eight example tiles reading "Exhibitor name" with a category. Replace with real names, and add `url` to make a tile a link. Emptying the array switches the section to a "line-up announced shortly" state automatically.                                                                                                                                                                               |
+| **Parking and access**    | FAQ + the Access panel under Visiting | Written as "being confirmed" with an invitation to get in touch.                                                                                                                                                                                                                                                                                                                                        |
+| **Organiser biographies** | Organisers section in `+page.svelte`  | One factual sentence about TBFS and NCIM; no personal bios.                                                                                                                                                                                                                                                                                                                                             |
+| **Strand descriptions**   | `strands`                             | Written to be true of a fair of this kind and safe to publish as-is, but they're my words — worth her eye before launch.                                                                                                                                                                                                                                                                                |
+
+## The shared copy doc
+
+The organisers edit the site's wording in a Google Doc rather than by sending notes:
+
+<https://docs.google.com/document/d/1tZ2isW8Ae2K429EXLWO3BL0UtuQ6dkwfOKEp67U8XAU/edit>
+
+`bun run scripts/export-copy.ts` regenerates it from `site.ts` (pipe to a file, then
+`mm drive doc "..." --file copy.md --folder <id>`). To read their edits back:
+
+```bash
+mm drive read <doc-id> --as html --out copy.html   # html, not txt — it keeps heading levels
+```
+
+The headings are the contract between the doc and `site.ts`, which is why the doc asks them
+not to rename any. Note `--as txt` works too but flattens headings into ordinary lines, and
+`--as md` currently 503s at the gateway.
 
 ## Speakers
 

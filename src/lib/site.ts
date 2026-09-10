@@ -35,6 +35,18 @@ export const event = {
 	contactEmail: 'hello@thrivethroughmenopause.co.uk'
 };
 
+/**
+ * The opening text under the hero. Kept here rather than in the markup so the
+ * copy the organisers actually read and edit lives in one file.
+ */
+export const intro = {
+	lead: 'An afternoon for anyone going through menopause — and for the people alongside them.',
+	paragraphs: [
+		"Menopause isn't a problem to be solved in a ten-minute appointment. It touches sleep, work, mood, strength and confidence, and most of us are handed very little to go on. This day brings the people who can help into one room: practitioners, therapists, teachers and local businesses, alongside talks from people who work with menopause every day.",
+		'Come for an hour or stay for the whole afternoon. Browse the stands, sit in on a talk, try a gentle yoga session, book a taster treatment — or simply sit down with a cup of tea and talk to someone who understands.'
+	]
+};
+
 /** The six strands from the poster. Each chip on the poster links to its card. */
 export const strands = [
 	{
@@ -161,8 +173,17 @@ export const speakers = [
 ];
 
 /**
+ * Flip to true once `timetable` carries real slots. While it is false the section
+ * shows the shape of the day in prose instead of a running order full of "to be
+ * confirmed" — which read as nobody being booked, directly under eight speakers
+ * who are.
+ */
+export const timetableConfirmed = false;
+
+/**
  * PLACEHOLDER: the shape of the day, with slots to be filled once speakers confirm.
- * Times are indicative — replace title/speaker as each is booked.
+ * Times are indicative — replace title/speaker as each is booked. Not shown on the
+ * page until `timetableConfirmed` is true.
  */
 export const timetable = [
 	{ time: '12:00', title: 'Doors open', speaker: 'Exhibition and wellness stands open all day' },

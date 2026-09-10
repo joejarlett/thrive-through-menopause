@@ -1,7 +1,16 @@
 <script lang="ts">
 	import LotusMark from './LotusMark.svelte';
 	import { reveal } from '$lib/actions/reveal';
-	import { event, strands, speakers, timetable, exhibitors, faqs } from '$lib/site';
+	import {
+		event,
+		intro,
+		strands,
+		speakers,
+		timetable,
+		timetableConfirmed,
+		exhibitors,
+		faqs
+	} from '$lib/site';
 
 	/** "https://mindset-in-motion.co.uk/" reads better on a card as the bare host. */
 	function tidyLink(url: string) {
@@ -62,47 +71,10 @@
 	<!-- ── The day ──────────────────────────────────────── -->
 	<section class="about" id="about">
 		<div class="wrap">
-			<p class="lead" use:reveal>
-				An afternoon for anyone going through menopause — and for the people alongside them.
-			</p>
+			<p class="lead" use:reveal>{intro.lead}</p>
 			<div class="two-col">
-				<p use:reveal={80}>
-					Menopause isn't a problem to be solved in a ten-minute appointment. It touches sleep,
-					work, mood, strength and confidence, and most of us are handed very little to go on. This
-					day brings the people who can help into one room: practitioners, therapists, teachers and
-					local businesses, alongside talks from people who work with menopause every day.
-				</p>
-				<p use:reveal={160}>
-					Come for an hour or stay for the whole afternoon. Browse the stands, sit in on a talk, try
-					a gentle yoga session, book a taster treatment — or simply sit down with a cup of tea and
-					talk to someone who understands.
-				</p>
-			</div>
-		</div>
-	</section>
-
-	<!-- ── What's on ────────────────────────────────────── -->
-	<section class="strands wash" aria-labelledby="whats-on">
-		<div class="wrap">
-			<p class="eyebrow" use:reveal>What's on</p>
-			<h2 id="whats-on" use:reveal={60}>Six strands, running right across the afternoon</h2>
-
-			<div class="cards">
-				{#each strands as strand, i (strand.id)}
-					<article class="card" id={strand.id} use:reveal={i * 70}>
-						<span class="petal" aria-hidden="true">
-							<svg viewBox="0 0 24 24" fill="none">
-								<path
-									d="M12 22C5 18 3 11 4 3c8 1 15 3 18 10-3 6-7 8-10 9Z"
-									stroke="currentColor"
-									stroke-width="1.4"
-									stroke-linejoin="round"
-								/>
-							</svg>
-						</span>
-						<h3>{strand.title}</h3>
-						<p>{strand.blurb}</p>
-					</article>
+				{#each intro.paragraphs as para, i (i)}
+					<p use:reveal={80 + i * 80}>{para}</p>
 				{/each}
 			</div>
 		</div>
@@ -153,27 +125,61 @@
 		</div>
 	</section>
 
+	<!-- ── What's on ────────────────────────────────────── -->
+	<section class="strands wash" aria-labelledby="whats-on">
+		<div class="wrap">
+			<p class="eyebrow" use:reveal>What's on</p>
+			<h2 id="whats-on" use:reveal={60}>Six strands, running right across the afternoon</h2>
+
+			<div class="cards">
+				{#each strands as strand, i (strand.id)}
+					<article class="card" id={strand.id} use:reveal={i * 70}>
+						<span class="petal" aria-hidden="true">
+							<svg viewBox="0 0 24 24" fill="none">
+								<path
+									d="M12 22C5 18 3 11 4 3c8 1 15 3 18 10-3 6-7 8-10 9Z"
+									stroke="currentColor"
+									stroke-width="1.4"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</span>
+						<h3>{strand.title}</h3>
+						<p>{strand.blurb}</p>
+					</article>
+				{/each}
+			</div>
+		</div>
+	</section>
+
 	<!-- ── Timetable ────────────────────────────────────── -->
 	<section class="timetable" aria-labelledby="timetable-heading">
 		<div class="wrap">
 			<p class="eyebrow" use:reveal>The shape of the day</p>
 			<h2 id="timetable-heading" use:reveal={60}>How the afternoon runs</h2>
-			<p class="note" use:reveal={100}>
-				Indicative for now — speakers and session titles are being confirmed, and this page updates
-				as each one is booked.
-			</p>
+			{#if timetableConfirmed}
+				<p class="note" use:reveal={100}>
+					Indicative for now — this page updates as each session is booked.
+				</p>
 
-			<ol class="timeline">
-				{#each timetable as slot, i (slot.time + slot.title)}
-					<li use:reveal={i * 50}>
-						<time>{slot.time}</time>
-						<div class="slot">
-							<h3>{slot.title}</h3>
-							{#if slot.speaker}<p>{slot.speaker}</p>{/if}
-						</div>
-					</li>
-				{/each}
-			</ol>
+				<ol class="timeline">
+					{#each timetable as slot, i (slot.time + slot.title)}
+						<li use:reveal={i * 50}>
+							<time>{slot.time}</time>
+							<div class="slot">
+								<h3>{slot.title}</h3>
+								{#if slot.speaker}<p>{slot.speaker}</p>{/if}
+							</div>
+						</li>
+					{/each}
+				</ol>
+			{:else}
+				<p class="note" use:reveal={100}>
+					Doors open at midday and the exhibition and wellness stands run all afternoon. Talks,
+					workshops and yoga sessions are timetabled across the day — the running order is being
+					finalised with the speakers, and will be published here and on the door before the event.
+				</p>
+			{/if}
 		</div>
 	</section>
 
@@ -822,9 +828,9 @@
 		overflow-wrap: anywhere;
 	}
 
-	/* Speakers and the timetable are both on the ivory ground — a hairline keeps
-	   them from reading as one long section. */
-	.timetable {
+	/* The line-up follows the opening text on the same ivory ground — a hairline
+	   keeps the two from reading as one long section. */
+	.speakers {
 		border-top: 1px solid var(--iv-line);
 	}
 

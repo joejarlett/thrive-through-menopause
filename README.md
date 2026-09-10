@@ -2,6 +2,11 @@
 
 Event site for a Bristol menopause and healing fair — 18 October, Ham Green House.
 
+**Live:** <https://thrive-through-menopause.vercel.app>
+
+**Shared copy doc:** <https://docs.google.com/document/d/1tZ2isW8Ae2K429EXLWO3BL0UtuQ6dkwfOKEp67U8XAU/edit> — the organisers edit the wording there, we read it back and
+apply it here. [Drive folder](https://drive.google.com/drive/folders/1Ef-hc2i4kNfJ0AZYBH4ZT2PH7g8p_nE0). See [docs/content-todo.md](docs/content-todo.md).
+
 The site takes its identity from the printed poster — lotus, wordmark, purple — and gives it
 room to breathe on screen. The poster itself is reproduced exactly at `/poster`, where every
 dimension is a percentage of its own width, measured from the artwork (1131 × 1600), so the
