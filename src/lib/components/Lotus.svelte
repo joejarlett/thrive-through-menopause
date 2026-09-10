@@ -7,12 +7,12 @@
 		`M 0 0 C ${-w} ${-h * 0.44}, ${-w * 0.7} ${-h * 0.84}, 0 ${-h}` +
 		` C ${w * 0.7} ${-h * 0.84}, ${w} ${-h * 0.44}, 0 0 Z`;
 
-	/** Swept petal — leans away from the centre, for the outer fan. */
+	/** Swept petal - leans away from the centre, for the outer fan. */
 	const sweep = (h: number, w: number) =>
 		`M 0 0 C ${-w * 0.5} ${-h * 0.46}, ${-w * 0.55} ${-h * 0.84}, ${w * 0.22} ${-h}` +
 		` C ${w * 1.2} ${-h * 0.76}, ${w * 1.1} ${-h * 0.32}, 0 0 Z`;
 
-	// [angle from vertical, length, half-width, swept?] — mirrored either side
+	// [angle from vertical, length, half-width, swept?] - mirrored either side
 	const petals: Array<[number, number, number, boolean]> = [
 		[0, 332, 94, false],
 		[29, 320, 90, false],

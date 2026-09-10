@@ -4,12 +4,12 @@
 	/** `noindex` keeps the alternative design out of search while it stays available. */
 	let { noindex = false }: { noindex?: boolean } = $props();
 
-	const description = `${site.strapline} — ${event.dateLabel}, ${event.timeLabel} at ${event.venue}, ${event.street}, ${event.postcode}. Exhibitions, yoga, workshops, wellbeing, wellness stands and expert talks.`;
+	const description = `${site.strapline} - ${event.dateLabel}, ${event.timeLabel} at ${event.venue}, ${event.street}, ${event.postcode}. Exhibitions, yoga, workshops, wellbeing, wellness stands and expert talks.`;
 
 	const eventSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'Event',
-		name: `${site.title} — ${site.strapline}`,
+		name: `${site.title} - ${site.strapline}`,
 		description:
 			'A Bristol menopause and healing fair: exhibitions, yoga, workshops, wellbeing, wellness stands and expert talks.',
 		startDate: event.startsAt,
@@ -47,14 +47,14 @@
 </script>
 
 <svelte:head>
-	<title>{site.title} — {site.strapline}</title>
+	<title>{site.title} - {site.strapline}</title>
 	<meta name="description" content={description} />
 	{#if noindex}
 		<meta name="robots" content="noindex" />
 	{:else}
 		<link rel="canonical" href={site.url} />
 	{/if}
-	<meta property="og:title" content="{site.title} — {site.strapline}" />
+	<meta property="og:title" content="{site.title} - {site.strapline}" />
 	<meta property="og:description" content={description} />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={site.url} />

@@ -2,7 +2,7 @@
  * Single source of truth for everything the site says about the event.
  *
  * Entries marked PLACEHOLDER are structure standing in for content we don't have
- * yet — they are safe to show (nothing invented is stated as fact) but every one
+ * yet - they are safe to show (nothing invented is stated as fact) but every one
  * of them is listed in docs/content-todo.md and wants replacing before launch.
  */
 
@@ -14,7 +14,7 @@ export const site = {
 };
 
 export const event = {
-	/** PLACEHOLDER: the poster says "18 October" with no year — 2026 assumed, please confirm. */
+	/** PLACEHOLDER: the poster says "18 October" with no year - 2026 assumed, please confirm. */
 	startsAt: '2026-10-18T12:00:00+01:00',
 	endsAt: '2026-10-18T17:00:00+01:00',
 	dateLabel: 'Sunday 18 October 2026',
@@ -29,7 +29,7 @@ export const event = {
 	},
 	mapsUrl:
 		'https://www.google.com/maps/search/?api=1&query=Ham+Green+House%2C+Chapel+Pill+Lane%2C+Bristol+BS20+0HH',
-	/** The existing Ticket Tailor event — the destination the poster's QR code encodes. */
+	/** The existing Ticket Tailor event - the destination the poster's QR code encodes. */
 	ticketsUrl: 'https://buytickets.at/thebristolfashionshow/2333887',
 	/** PLACEHOLDER: confirm the address enquiries should go to. */
 	contactEmail: 'hello@thrivethroughmenopause.co.uk'
@@ -40,10 +40,10 @@ export const event = {
  * copy the organisers actually read and edit lives in one file.
  */
 export const intro = {
-	lead: 'An afternoon for anyone going through menopause — and for the people alongside them.',
+	lead: 'An afternoon for anyone going through menopause - and for the people alongside them.',
 	paragraphs: [
 		"Menopause isn't a problem to be solved in a ten-minute appointment. It touches sleep, work, mood, strength and confidence, and most of us are handed very little to go on. This day brings the people who can help into one room: practitioners, therapists, teachers and local businesses, alongside talks from people who work with menopause every day.",
-		'Come for an hour or stay for the whole afternoon. Browse the stands, sit in on a talk, try a gentle yoga session, book a taster treatment — or simply sit down with a cup of tea and talk to someone who understands.'
+		'Come for an hour or stay for the whole afternoon. Browse the stands, sit in on a talk, try a gentle yoga session, book a taster treatment - or simply sit down with a cup of tea and talk to someone who understands.'
 	]
 };
 
@@ -59,7 +59,7 @@ export const strands = [
 		id: 'yoga',
 		title: 'Yoga',
 		blurb:
-			'Gentle, accessible sessions suitable for every body and every stage. Mats provided — no experience needed, and you can join whichever session fits your day.'
+			'Gentle, accessible sessions suitable for every body and every stage. Mats provided - no experience needed, and you can join whichever session fits your day.'
 	},
 	{
 		id: 'workshops',
@@ -77,7 +77,7 @@ export const strands = [
 		id: 'wellness-stands',
 		title: 'Wellness Stands',
 		blurb:
-			'Taster treatments and one-to-one consultations — from nutrition and movement to complementary therapies — bookable when you arrive.'
+			'Taster treatments and one-to-one consultations - from nutrition and movement to complementary therapies - bookable when you arrive.'
 	},
 	{
 		id: 'expert-talks',
@@ -89,7 +89,7 @@ export const strands = [
 
 /**
  * The confirmed line-up. Blurbs are cut down from the full bios the speakers
- * sent — those are kept verbatim in docs/speakers/<slug>.md, and the headshot
+ * sent - those are kept verbatim in docs/speakers/<slug>.md, and the headshot
  * masters in docs/speakers/headshots/. Card images are <slug>-400/-800.jpg.
  *
  * `doing` is what they are bringing to the day, from the organiser's sheet.
@@ -103,7 +103,7 @@ export const speakers = [
 		role: 'Menopause coach, speaker and author',
 		doing: 'Talk',
 		blurb:
-			'A litigation lawyer for twenty years, Shona came to menopause the hard way — a cycling accident, uterine cancer, and surgical menopause at 44. She now helps women stop fighting their bodies and start working with them.',
+			'A litigation lawyer for twenty years, Shona came to menopause the hard way - a cycling accident, uterine cancer, and surgical menopause at 44. She now helps women stop fighting their bodies and start working with them.',
 		url: 'https://mindset-in-motion.co.uk'
 	},
 	{
@@ -130,7 +130,7 @@ export const speakers = [
 		role: 'Creative arts psychotherapist, dramatherapist and ecotherapist',
 		doing: 'Opening session',
 		/**
-		 * "Ecotherapist" is her own word, from the bio she sent for this event —
+		 * "Ecotherapist" is her own word, from the bio she sent for this event -
 		 * we are repeating her self-description, not upgrading her. Her Eco-Depth
 		 * Practitioner training completes in late September 2026, a few weeks
 		 * before the event, and she has asked to be presented as qualified for it.
@@ -138,7 +138,7 @@ export const speakers = [
 		 * same update once she qualifies.)
 		 */
 		blurb:
-			"A creative arts psychotherapist who works with image, story and the body when talking alone isn't enough. Her opening workshop, Awakenings, draws on eco-depth psychology to read menopause as a rite of passage — a clearing that reveals what is essential.",
+			"A creative arts psychotherapist who works with image, story and the body when talking alone isn't enough. Her opening workshop, Awakenings, draws on eco-depth psychology to read menopause as a rite of passage - a clearing that reveals what is essential.",
 		url: 'https://www.pippaford.co.uk'
 	},
 	{
@@ -147,7 +147,7 @@ export const speakers = [
 		role: 'Holistic health and wellness coach',
 		doing: 'Mindfulness workshop',
 		blurb:
-			'Fifteen years in healthcare showed Emma how easily our own wellbeing slips to the bottom of the list. She brings mindfulness, breathwork and immersive relaxation to midlife — no perfection required, just room to pause.',
+			'Fifteen years in healthcare showed Emma how easily our own wellbeing slips to the bottom of the list. She brings mindfulness, breathwork and immersive relaxation to midlife - no perfection required, just room to pause.',
 		url: ''
 	},
 	{
@@ -164,7 +164,7 @@ export const speakers = [
 		name: 'Julie Britton',
 		role: 'Speaker',
 		doing: 'Talk',
-		/** PLACEHOLDER: drawn from Julie's own words — she has not sent a bio yet. */
+		/** PLACEHOLDER: drawn from Julie's own words - she has not sent a bio yet. */
 		blurb:
 			'Julie speaks about boundaries and coming home to yourself: the moment you stop living to keep everyone else comfortable, and start honouring what is true for you.',
 		url: 'https://www.instagram.com/britton7148'
@@ -174,7 +174,7 @@ export const speakers = [
 		name: 'Lisa Hunnego',
 		role: '',
 		doing: 'Two cooking sessions',
-		/** PLACEHOLDER: no bio yet — the card renders as name and photo until there is one. */
+		/** PLACEHOLDER: no bio yet - the card renders as name and photo until there is one. */
 		blurb: '',
 		url: ''
 	}
@@ -183,14 +183,14 @@ export const speakers = [
 /**
  * Flip to true once `timetable` carries real slots. While it is false the section
  * shows the shape of the day in prose instead of a running order full of "to be
- * confirmed" — which read as nobody being booked, directly under eight speakers
+ * confirmed" - which read as nobody being booked, directly under eight speakers
  * who are.
  */
 export const timetableConfirmed = false;
 
 /**
  * PLACEHOLDER: the shape of the day, with slots to be filled once speakers confirm.
- * Times are indicative — replace title/speaker as each is booked. Not shown on the
+ * Times are indicative - replace title/speaker as each is booked. Not shown on the
  * page until `timetableConfirmed` is true.
  */
 export const timetable = [
@@ -206,7 +206,7 @@ export const timetable = [
 
 /**
  * PLACEHOLDER: example rows showing how the line-up will read. Replace with real
- * exhibitors as they confirm — an empty array renders a "coming soon" state instead.
+ * exhibitors as they confirm - an empty array renders a "coming soon" state instead.
  */
 export const exhibitors = [
 	{ name: 'Exhibitor name', category: 'Nutrition', url: '' },
@@ -223,7 +223,7 @@ export const exhibitors = [
 export const faqs = [
 	{
 		q: 'How much are tickets?',
-		a: 'Tickets are booked through Ticket Tailor — follow the booking link for current prices and availability. Tickets will also be available on the door on the day.'
+		a: 'Tickets are booked through Ticket Tailor - follow the booking link for current prices and availability. Tickets will also be available on the door on the day.'
 	},
 	{
 		q: 'Do I need to book in advance?',
@@ -231,7 +231,7 @@ export const faqs = [
 	},
 	{
 		q: 'Is there parking?',
-		a: 'Parking arrangements at Ham Green House are being confirmed — details will be added here before the event.'
+		a: 'Parking arrangements at Ham Green House are being confirmed - details will be added here before the event.'
 	},
 	{
 		q: 'Is the venue accessible?',
@@ -243,6 +243,6 @@ export const faqs = [
 	},
 	{
 		q: 'Can I have a stand?',
-		a: 'Yes — we welcome practitioners, makers and local businesses. Get in touch and we will send you the details.'
+		a: 'Yes - we welcome practitioners, makers and local businesses. Get in touch and we will send you the details.'
 	}
 ];

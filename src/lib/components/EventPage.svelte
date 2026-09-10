@@ -12,7 +12,7 @@
 	<section class="band-intro" id="about">
 		<div class="col">
 			<p class="eyebrow">{event.dateLabel} · {event.timeLabel}</p>
-			<h2>A day for anyone going through menopause — and the people alongside them.</h2>
+			<h2>A day for anyone going through menopause - and the people alongside them.</h2>
 			<p>
 				Menopause is not a problem to be solved in a ten-minute appointment. It touches sleep, work,
 				mood, strength and confidence, and most of us are handed very little to go on. Thrive
@@ -77,9 +77,9 @@
 			<p class="eyebrow">Who you'll meet</p>
 			<h2 id="exhibitors-heading">Exhibitors &amp; wellness stands</h2>
 			<p class="note">
-				The line-up is still being confirmed. If you'd like a stand, we'd love to hear from you —
+				The line-up is still being confirmed. If you'd like a stand, we'd love to hear from you -
 				<a
-					href="mailto:{event.contactEmail}?subject=Stand%20enquiry%20—%20Thrive%20Through%20Menopause"
+					href="mailto:{event.contactEmail}?subject=Stand%20enquiry%20-%20Thrive%20Through%20Menopause"
 					>get in touch</a
 				>.
 			</p>
@@ -176,7 +176,7 @@
 	</section>
 
 	<footer class="site-footer">
-		<p>Thrive Through Menopause — A Bristol Menopause &amp; Healing Fair</p>
+		<p>Thrive Through Menopause - A Bristol Menopause &amp; Healing Fair</p>
 		<p>{event.address}</p>
 	</footer>
 </main>

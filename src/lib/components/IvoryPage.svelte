@@ -86,7 +86,7 @@
 			<p class="eyebrow" use:reveal>The line-up</p>
 			<h2 id="speakers-heading" use:reveal={60}>Who you'll hear from</h2>
 			<p class="note" use:reveal={100}>
-				Practitioners, therapists and coaches who work with menopause every day — with more still to
+				Practitioners, therapists and coaches who work with menopause every day - with more still to
 				be announced.
 			</p>
 
@@ -159,7 +159,7 @@
 			<h2 id="timetable-heading" use:reveal={60}>How the afternoon runs</h2>
 			{#if timetableConfirmed}
 				<p class="note" use:reveal={100}>
-					Indicative for now — this page updates as each session is booked.
+					Indicative for now - this page updates as each session is booked.
 				</p>
 
 				<ol class="timeline">
@@ -176,7 +176,7 @@
 			{:else}
 				<p class="note" use:reveal={100}>
 					Doors open at midday and the exhibition and wellness stands run all afternoon. Talks,
-					workshops and yoga sessions are timetabled across the day — the running order is being
+					workshops and yoga sessions are timetabled across the day - the running order is being
 					finalised with the speakers, and will be published here and on the door before the event.
 				</p>
 			{/if}
@@ -828,7 +828,7 @@
 		overflow-wrap: anywhere;
 	}
 
-	/* The line-up follows the opening text on the same ivory ground — a hairline
+	/* The line-up follows the opening text on the same ivory ground - a hairline
 	   keeps the two from reading as one long section. */
 	.speakers {
 		border-top: 1px solid var(--iv-line);

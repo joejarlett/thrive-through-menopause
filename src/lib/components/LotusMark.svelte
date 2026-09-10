@@ -1,7 +1,7 @@
 <script lang="ts">
 	/**
 	 * Fine-line lotus. Draws itself petal by petal on load, then breathes very
-	 * slowly — a calm entrance rather than an animation you notice twice.
+	 * slowly - a calm entrance rather than an animation you notice twice.
 	 */
 	let { class: className = '' }: { class?: string } = $props();
 

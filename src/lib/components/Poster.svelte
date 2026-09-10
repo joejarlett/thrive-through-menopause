@@ -41,7 +41,7 @@
 			<h2 class="fair">Menopause<br />&amp; Healing Fair</h2>
 		</section>
 
-		<!-- What's on — each chip jumps to its section further down the page -->
+		<!-- What's on - each chip jumps to its section further down the page -->
 		<nav class="tags" aria-label="What's on">
 			{#each strands as strand (strand.id)}
 				<a class="tag" href="#{strand.id}">{strand.title}</a>
@@ -71,7 +71,7 @@
 				<img
 					class="ncim"
 					src="/ncim.png"
-					alt="National Centre for Integrative Medicine — inspiring health and wellbeing"
+					alt="National Centre for Integrative Medicine - inspiring health and wellbeing"
 					width="312"
 					height="91"
 				/>
