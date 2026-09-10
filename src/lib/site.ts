@@ -127,11 +127,15 @@ export const speakers = [
 	{
 		slug: 'pippa-ford',
 		name: 'Pippa Ford',
-		role: 'Dramatherapist, ecotherapist and EMDR practitioner',
+		role: 'Creative arts psychotherapist, dramatherapist and eco-depth practitioner',
 		doing: 'Opening session',
+		/**
+		 * Eco-depth practitioner is a completed qualification as of September 2026.
+		 * pippaford.co.uk still says "currently in training" and wants updating.
+		 */
 		blurb:
-			'Pippa reads menopause as a rite of passage rather than a problem to be fixed. Her opening session treats it as a threshold — a clearing that reveals what is essential and what is still calling you.',
-		url: ''
+			"A creative arts psychotherapist who works with image, story and the body when talking alone isn't enough. Her opening workshop, Awakenings, draws on eco-depth psychology to read menopause as a rite of passage — a clearing that reveals what is essential.",
+		url: 'https://www.pippaford.co.uk'
 	},
 	{
 		slug: 'emma-rice',
