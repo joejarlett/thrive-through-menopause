@@ -76,6 +76,91 @@ export const strands = [
 ];
 
 /**
+ * The confirmed line-up. Blurbs are cut down from the full bios the speakers
+ * sent — those are kept verbatim in docs/speakers/<slug>.md, and the headshot
+ * masters in docs/speakers/headshots/. Card images are <slug>-400/-800.jpg.
+ *
+ * `doing` is what they are bringing to the day, from the organiser's sheet.
+ * A speaker with no `blurb` renders as a name-and-photo card until their bio
+ * arrives, so the section can go live before the last one is in.
+ */
+export const speakers = [
+	{
+		slug: 'shona-hirons',
+		name: 'Shona Hirons',
+		role: 'Menopause coach, speaker and author',
+		doing: 'Talk',
+		blurb:
+			'A litigation lawyer for twenty years, Shona came to menopause the hard way — a cycling accident, uterine cancer, and surgical menopause at 44. She now helps women stop fighting their bodies and start working with them.',
+		url: 'https://mindset-in-motion.co.uk'
+	},
+	{
+		slug: 'claire-cohen',
+		name: 'Claire Cohen',
+		role: 'Naturopathic nutritional therapist',
+		doing: 'Three cooking sessions',
+		blurb:
+			'Her own perimenopause prompted a dramatic change of career. Claire cuts through the noise about food and hormones, and her hands-on sessions send you home with nutrient-dense snacks you will actually make.',
+		url: ''
+	},
+	{
+		slug: 'caroline-gaskin',
+		name: 'Caroline Gaskin',
+		role: "Homeopath and women's health coach",
+		doing: 'Talk and stand',
+		blurb:
+			'A textile designer who followed a different path and qualified as a homeopath in 2000. Caroline specialises in hormonal balance and managing menopause naturally, building health plans women can actually sustain.',
+		url: 'https://carolinegaskin.co.uk/'
+	},
+	{
+		slug: 'pippa-ford',
+		name: 'Pippa Ford',
+		role: 'Dramatherapist, ecotherapist and EMDR practitioner',
+		doing: 'Opening session',
+		blurb:
+			'Pippa reads menopause as a rite of passage rather than a problem to be fixed. Her opening session treats it as a threshold — a clearing that reveals what is essential and what is still calling you.',
+		url: ''
+	},
+	{
+		slug: 'emma-rice',
+		name: 'Emma Rice',
+		role: 'Holistic health and wellness coach',
+		doing: 'Mindfulness workshop',
+		blurb:
+			'Fifteen years in healthcare showed Emma how easily our own wellbeing slips to the bottom of the list. She brings mindfulness, breathwork and immersive relaxation to midlife — no perfection required, just room to pause.',
+		url: ''
+	},
+	{
+		slug: 'elena-mary',
+		name: 'Elena Mary',
+		role: 'Multidimensional healer, formerly a nurse',
+		doing: 'Womb meditation',
+		blurb:
+			'A nurse who followed a different calling. Elena offers energy healing for body, mind and soul, holistic support through perimenopause, and shares the Rites of the Munay Ki.',
+		url: 'https://bodysoulalignment.podia.com/'
+	},
+	{
+		slug: 'julie-britton',
+		name: 'Julie Britton',
+		role: 'Speaker',
+		doing: 'Talk',
+		/** PLACEHOLDER: drawn from Julie's own words — she has not sent a bio yet. */
+		blurb:
+			'Julie speaks about boundaries and coming home to yourself: the moment you stop living to keep everyone else comfortable, and start honouring what is true for you.',
+		url: 'https://www.instagram.com/britton7148'
+	},
+	{
+		slug: 'lisa-hunnego',
+		name: 'Lisa Hunnego',
+		role: '',
+		doing: 'Two cooking sessions',
+		/** PLACEHOLDER: no bio yet — the card renders as name and photo until there is one. */
+		blurb: '',
+		url: ''
+	}
+];
+
+/**
  * PLACEHOLDER: the shape of the day, with slots to be filled once speakers confirm.
  * Times are indicative — replace title/speaker as each is booked.
  */

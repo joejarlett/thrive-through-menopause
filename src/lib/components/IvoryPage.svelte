@@ -1,7 +1,15 @@
 <script lang="ts">
 	import LotusMark from './LotusMark.svelte';
 	import { reveal } from '$lib/actions/reveal';
-	import { event, strands, timetable, exhibitors, faqs } from '$lib/site';
+	import { event, strands, speakers, timetable, exhibitors, faqs } from '$lib/site';
+
+	/** "https://mindset-in-motion.co.uk/" reads better on a card as the bare host. */
+	function tidyLink(url: string) {
+		return url
+			.replace(/^https?:\/\//, '')
+			.replace(/^www\./, '')
+			.replace(/\/$/, '');
+	}
 
 	/** The booking bar only earns its place once the hero's own CTA has scrolled away. */
 	let pastHero = $state(false);
@@ -97,6 +105,51 @@
 					</article>
 				{/each}
 			</div>
+		</div>
+	</section>
+
+	<!-- ── Speakers ─────────────────────────────────────── -->
+	<section class="speakers" aria-labelledby="speakers-heading">
+		<div class="wrap">
+			<p class="eyebrow" use:reveal>The line-up</p>
+			<h2 id="speakers-heading" use:reveal={60}>Who you'll hear from</h2>
+			<p class="note" use:reveal={100}>
+				Practitioners, therapists and coaches who work with menopause every day — with more still to
+				be announced.
+			</p>
+
+			<ul class="roster">
+				{#each speakers as person, i (person.slug)}
+					<li class="person" use:reveal={i * 60}>
+						<img
+							class="portrait"
+							src="/speakers/{person.slug}-640.jpg"
+							srcset="/speakers/{person.slug}-320.jpg 320w, /speakers/{person.slug}-640.jpg 640w, /speakers/{person.slug}-960.jpg 960w"
+							sizes="(max-width: 35rem) 90vw, (max-width: 53rem) 45vw, (max-width: 70rem) 30vw, 21rem"
+							alt={person.name}
+							width="640"
+							height="800"
+							loading="lazy"
+							decoding="async"
+						/>
+						<div class="person-text">
+							{#if person.doing}<span class="doing">{person.doing}</span>{/if}
+							<h3>{person.name}</h3>
+							{#if person.role}<p class="role">{person.role}</p>{/if}
+							{#if person.blurb}
+								<p class="person-blurb">{person.blurb}</p>
+							{:else}
+								<p class="person-blurb pending">Full details to be confirmed.</p>
+							{/if}
+							{#if person.url}
+								<a class="person-link" href={person.url} target="_blank" rel="noopener"
+									>{tidyLink(person.url)}</a
+								>
+							{/if}
+						</div>
+					</li>
+				{/each}
+			</ul>
 		</div>
 	</section>
 
@@ -693,6 +746,86 @@
 		margin-top: 0.15rem;
 		font-size: 0.96rem;
 		color: var(--iv-muted);
+	}
+
+	/* ── Speakers ─────────────────────────────────────── */
+	.roster {
+		margin: clamp(2rem, 4vw, 2.75rem) 0 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+		gap: clamp(1rem, 2.5vw, 1.5rem);
+	}
+
+	.person {
+		display: flex;
+		flex-direction: column;
+		background: var(--iv-raised);
+		border: 1px solid var(--iv-line);
+		border-radius: 1rem;
+		overflow: hidden;
+	}
+
+	.portrait {
+		display: block;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 4 / 5;
+		object-fit: cover;
+		background: var(--iv-wash);
+	}
+
+	.person-text {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 1.15rem 1.25rem 1.35rem;
+	}
+
+	.doing {
+		margin-bottom: 0.7rem;
+		padding: 0.25rem 0.7rem;
+		border-radius: 999px;
+		background: var(--iv-wash);
+		color: var(--iv-purple);
+		font-size: 0.68rem;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		line-height: 1.5;
+		text-transform: uppercase;
+	}
+
+	.role {
+		margin-top: 0.2rem;
+		font-size: 0.9rem;
+		font-weight: 600;
+		line-height: 1.4;
+		color: var(--iv-purple);
+	}
+
+	.person-blurb {
+		margin-top: 0.6rem;
+		font-size: 0.95rem;
+		line-height: 1.62;
+		color: var(--iv-muted);
+	}
+
+	.person-blurb.pending {
+		font-style: italic;
+	}
+
+	.person-link {
+		margin-top: 0.8rem;
+		font-size: 0.86rem;
+		font-weight: 600;
+		overflow-wrap: anywhere;
+	}
+
+	/* Speakers and the timetable are both on the ivory ground — a hairline keeps
+	   them from reading as one long section. */
+	.timetable {
+		border-top: 1px solid var(--iv-line);
 	}
 
 	/* ── Exhibitors ───────────────────────────────────── */

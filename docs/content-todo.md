@@ -21,10 +21,26 @@ one file, no hunting through markup.
 | What                      | Where                                 | Currently                                                                                                                                                                                                                 |
 | ------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Talk timetable**        | `timetable`                           | Real slot times with "Speaker to be confirmed" against each. Replace titles and names as booked; the section already carries a note saying the running order is indicative.                                               |
+| **Speaker bios**          | `speakers`                            | Eight of the sixteen names on the organisers' Speaker Info sheet. Lisa Hunnego has no bio yet and renders as a photo and name; Julie Britton's card is written from her own words because what she sent is an Instagram reel script, not a bio. Eight more speakers have neither bio nor headshot: Ruth, Ellen Szide, Izabela Collins, Dr Zoe & Pauline, Joey, Alex Francis, Annastasia, Fabien Valles. |
 | **Exhibitor list**        | `exhibitors`                          | Eight example tiles reading "Exhibitor name" with a category. Replace with real names, and add `url` to make a tile a link. Emptying the array switches the section to a "line-up announced shortly" state automatically. |
 | **Parking and access**    | FAQ + the Access panel under Visiting | Written as "being confirmed" with an invitation to get in touch.                                                                                                                                                          |
 | **Organiser biographies** | Organisers section in `+page.svelte`  | One factual sentence about TBFS and NCIM; no personal bios.                                                                                                                                                               |
 | **Strand descriptions**   | `strands`                             | Written to be true of a fair of this kind and safe to publish as-is, but they're my words — worth her eye before launch.                                                                                                  |
+
+## Speakers
+
+Full bios as supplied are kept verbatim in `docs/speakers/<slug>.md` and headshot masters in
+`docs/speakers/headshots/`. The site shows a cut-down blurb from `speakers` in `site.ts` —
+the long version is the record, not the page copy.
+
+`scripts/pull-speaker.sh` fetches a new one from Drive:
+
+```bash
+scripts/pull-speaker.sh - <bio-doc-url> <headshot-url>
+```
+
+`-` as the name takes it from the Drive file name. Either URL can be `-` if that half hasn't
+arrived. It writes the bio, the master, and the three card widths (320/640/960).
 
 ## Assets
 

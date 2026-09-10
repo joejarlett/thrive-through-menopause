@@ -3,8 +3,10 @@
 #
 #   scripts/pull-speaker.sh "Shona Hirons" <bio-doc-url> <headshot-url>
 #
-# Bio  -> docs/speakers/<slug>.md   (docx/Google Doc converted to markdown)
-# Shot -> static/speakers/<slug>.jpg (long edge 1200, quality 82)
+# Bio  -> docs/speakers/<slug>.md            (docx/Google Doc converted to markdown)
+# Shot -> docs/speakers/headshots/<slug>.jpg (master, long edge 1200)
+#      -> static/speakers/<slug>-400.jpg     (card, 1x)
+#      -> static/speakers/<slug>-800.jpg     (card, 2x)
 #
 # Either URL may be omitted with "-" if that speaker hasn't sent it yet.
 set -euo pipefail
@@ -55,8 +57,11 @@ fi
 
 if [ "$shot_url" != "-" ]; then
   id=$(id_of "$shot_url")
+  mkdir -p "$root/docs/speakers/headshots" "$root/static/speakers"
   mm drive download "$id" --out "$tmp/shot" >/dev/null
-  sips -s format jpeg -s formatOptions 82 -Z 1200 "$tmp/shot" \
-       --out "$root/static/speakers/$slug.jpg" >/dev/null
-  echo "headshot -> static/speakers/$slug.jpg ($(sips -g pixelWidth -g pixelHeight "$root/static/speakers/$slug.jpg" | awk '/pixel/{printf "%s ", $2}'))"
+  master="$root/docs/speakers/headshots/$slug.jpg"
+  sips -s format jpeg -s formatOptions 82 -Z 1200 "$tmp/shot" --out "$master" >/dev/null
+  sips -s format jpeg -s formatOptions 80 -Z 400 "$master" --out "$root/static/speakers/$slug-400.jpg" >/dev/null
+  sips -s format jpeg -s formatOptions 78 -Z 800 "$master" --out "$root/static/speakers/$slug-800.jpg" >/dev/null
+  echo "headshot -> static/speakers/$slug-{400,800}.jpg  (master in docs/speakers/headshots/)"
 fi
