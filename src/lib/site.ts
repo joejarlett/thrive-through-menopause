@@ -127,7 +127,7 @@ export const speakers = [
 	{
 		slug: 'pippa-ford',
 		name: 'Pippa Ford',
-		role: 'Creative arts psychotherapist, dramatherapist and ecotherapist',
+		role: 'Creative arts psychotherapist and ecotherapist',
 		doing: 'Opening session',
 		/**
 		 * "Ecotherapist" is her own word, from the bio she sent for this event -
@@ -136,9 +136,12 @@ export const speakers = [
 		 * before the event, and she has asked to be presented as qualified for it.
 		 * (pippaford.co.uk still says "currently in training" and will want the
 		 * same update once she qualifies.)
+		 *
+		 * Her own workshop copy says "eco-depth psychology"; "spiritual ecology"
+		 * here is the framing Joe asked for. Worth confirming with her.
 		 */
 		blurb:
-			"A creative arts psychotherapist who works with image, story and the body when talking alone isn't enough. Her opening workshop, Awakenings, draws on eco-depth psychology to read menopause as a rite of passage - a clearing that reveals what is essential.",
+			'Her opening session, Awakenings: Menopause as a Sacred Threshold, holds menopause as a psycho-spiritual journey, not a list of symptoms. Working with spiritual ecology, she reads the fire, the slowing and the turn inward as a clearing that reveals what is essential.',
 		url: 'https://www.pippaford.co.uk'
 	},
 	{
