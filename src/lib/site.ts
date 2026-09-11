@@ -142,7 +142,7 @@ export const speakers = [
 		 * is a different tradition and muddies what she does.
 		 */
 		blurb:
-			'Her opening session, Awakenings: Menopause as a Sacred Threshold, holds menopause as a psycho-spiritual journey, not a list of symptoms. Drawing on eco-depth psychology, it asks what might awaken if we listen to the inner voice, and what deepens as we come back to knowing ourselves as nature rather than apart from it.',
+			'Her opening session, Awakenings: Menopause as a Sacred Threshold, holds menopause as a psycho-spiritual journey. Drawing on eco-depth psychology, it asks what might awaken if we listen to the inner voice, and what deepens as we come back to knowing ourselves as nature rather than apart from it.',
 		url: 'https://www.pippaford.co.uk'
 	},
 	{
