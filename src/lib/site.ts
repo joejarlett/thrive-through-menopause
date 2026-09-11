@@ -137,11 +137,12 @@ export const speakers = [
 		 * (pippaford.co.uk still says "currently in training" and will want the
 		 * same update once she qualifies.)
 		 *
-		 * Her own workshop copy says "eco-depth psychology"; "spiritual ecology"
-		 * here is the framing Joe asked for. Worth confirming with her.
+		 * The framework is "eco-depth psychology", her own words - it sits with
+		 * the Jungian and image work. Don't reach for "spiritual ecology", which
+		 * is a different tradition and muddies what she does.
 		 */
 		blurb:
-			'Her opening session, Awakenings: Menopause as a Sacred Threshold, holds menopause as a psycho-spiritual journey, not a list of symptoms. Working with spiritual ecology, she reads the fire, the slowing and the turn inward as a clearing that reveals what is essential.',
+			'Her opening session, Awakenings: Menopause as a Sacred Threshold, holds menopause as a psycho-spiritual journey, not a list of symptoms. Working with eco-depth psychology, she reads the fire, the slowing and the turn inward as a clearing that reveals what is essential.',
 		url: 'https://www.pippaford.co.uk'
 	},
 	{
