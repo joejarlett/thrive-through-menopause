@@ -127,22 +127,23 @@ export const speakers = [
 	{
 		slug: 'pippa-ford',
 		name: 'Pippa Ford',
-		role: 'Creative arts psychotherapist and ecotherapist',
+		role: 'Creative arts psychotherapist, eco-therapist and final year eco-depth practitioner',
 		doing: 'Opening session',
 		/**
-		 * "Ecotherapist" is her own word, from the bio she sent for this event -
-		 * we are repeating her self-description, not upgrading her. Her Eco-Depth
-		 * Practitioner training completes in late September 2026, a few weeks
-		 * before the event, and she has asked to be presented as qualified for it.
-		 * (pippaford.co.uk still says "currently in training" and will want the
-		 * same update once she qualifies.)
+		 * Wording is Pippa's own, sent 11 September 2026. "Final year eco-depth
+		 * practitioner" is deliberate and now matches pippaford.co.uk, which says
+		 * she is currently in training - an earlier draft of this card presented
+		 * her as already qualified. Her training completes in late September 2026,
+		 * a few weeks before the event; the role line can drop "final year" then,
+		 * but only once she confirms. Both eco- terms are hyphenated so the two
+		 * sit as equals in the line, at her request.
 		 *
 		 * The framework is "eco-depth psychology", her own words - it sits with
 		 * the Jungian and image work. Don't reach for "spiritual ecology", which
 		 * is a different tradition and muddies what she does.
 		 */
 		blurb:
-			'Her opening session, Awakenings: Menopause as Sacred Threshold, holds menopause as a psycho-spiritual journey. Drawing on eco-depth psychology, it asks what might awaken if we listen to the inner voice, and what deepens as we come back to knowing ourselves as nature rather than apart from it.',
+			'Pippa works with image, somatic approaches and deeper nature connection practices. Her opening workshop, Awakenings, draws on eco-depth psychology to read menopause as a rite of passage - a clearing that reveals what is essential.',
 		url: 'https://www.pippaford.co.uk'
 	},
 	{
