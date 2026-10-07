@@ -1,0 +1,1 @@
+﻿With a background in dentistry, I support mid-life women who are suffering with changes in the mouth. The health of our mouth is closely connected to our general and mental health and I combine dental knowledge, nutrition and compassionate coaching and healing to support women through these changes.

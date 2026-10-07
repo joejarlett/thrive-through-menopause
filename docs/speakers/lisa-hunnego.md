@@ -1,0 +1,5 @@
+﻿Lisa Hunnego – Biography
+Lisa is a passionate wellness and nutrition advocate who supports women through the peri-menopause and menopause years. She believes that nutrition plays a key role in helping us feel our best and maintain good health at every stage of life.
+Lisa takes a holistic approach to wellbeing, exploring the connection between nutrition, gut health and overall healthspan. She helps women manage menopausal symptoms through practical lifestyle approaches, including gut microbiome support, fermented foods and personalised wellness strategies.
+Passionate about helping people prioritise themselves in today’s busy world, Lisa’s aim is to empower women to better understand their bodies, make positive changes and become the healthiest version of themselves.
+At Thrive Through Menopause, Lisa will be sharing her knowledge and practical insights to help women feel more informed and confident about their wellbeing through menopause and beyond. 💚

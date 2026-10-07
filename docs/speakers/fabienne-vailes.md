@@ -1,0 +1,2 @@
+﻿My bio: 
+Fabienne calls herself a recovering language teacher and a reformed mother. She is author of The Flourishing Student (in its second edition) aimed at teachers and tutorsn and co-author of How to Grow a Grown up for parents with Dr Dominique Thompson. She is also a podcaster and founder of Flourishing Education. She is a trained mindfulness teacher, hypnotherapist and NLP Master Practitioner and Coach.
