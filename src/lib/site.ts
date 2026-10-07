@@ -90,7 +90,8 @@ export const strands = [
 /**
  * The confirmed line-up. Blurbs are cut down from the full bios the speakers
  * sent - those are kept verbatim in docs/speakers/<slug>.md, and the headshot
- * masters in docs/speakers/headshots/. Card images are <slug>-400/-800.jpg.
+ * masters in docs/speakers/headshots/. Card images are <slug>-320/-640/-960.jpg,
+ * cropped 4:5.
  *
  * `doing` is what they are bringing to the day, from the organiser's sheet.
  * A speaker with no `blurb` renders as a name-and-photo card until their bio
@@ -119,7 +120,7 @@ export const speakers = [
 		slug: 'caroline-gaskin',
 		name: 'Caroline Gaskin',
 		role: "Homeopath and women's health coach",
-		doing: 'Talk and stand',
+		doing: 'Talk',
 		blurb:
 			'A textile designer who followed a different path and qualified as a homeopath in 2000. Caroline specialises in hormonal balance and managing menopause naturally, building health plans women can actually sustain.',
 		url: 'https://carolinegaskin.co.uk/'
@@ -177,10 +178,172 @@ export const speakers = [
 	{
 		slug: 'lisa-hunnego',
 		name: 'Lisa Hunnego',
-		role: '',
+		role: 'Wellness and nutrition advocate',
 		doing: 'Two cooking sessions',
-		/** PLACEHOLDER: no bio yet - the card renders as name and photo until there is one. */
-		blurb: '',
+		blurb:
+			'Lisa supports women through perimenopause and menopause, starting with food. Her approach connects nutrition, gut health and healthspan - expect fermented foods, microbiome support and practical changes that fit a busy life.',
+		url: ''
+	},
+	{
+		slug: 'elizabeth-thompson',
+		name: 'Dr Elizabeth Thompson',
+		role: 'Integrative medicine doctor and CEO of NCIM',
+		doing: 'Opening talk and panel',
+		blurb:
+			'Trained in medicine at Oxford and in palliative medicine to consultant level, Dr Thompson founded the National Centre for Integrative Medicine in 2014. She brings conventional, holistic, functional and lifestyle approaches together, and hosts the podcast Integrative Medicine Matters.',
+		url: 'https://ncim.org.uk/'
+	},
+	{
+		slug: 'zoue-lloyd-wright',
+		name: 'Dr Zouë Lloyd-Wright',
+		role: 'Integrated and functional medicine doctor',
+		doing: 'Talk and panel',
+		blurb:
+			'More than three decades in practice, spanning naturopathy, clinical nutrition, chiropractic and craniosacral therapy. Her talk, The Journey Home, looks at how hormones, minerals and nutrition connect - and how to nourish the body through midlife.',
+		url: ''
+	},
+	{
+		slug: 'pauline-cox',
+		name: 'Pauline Cox',
+		role: 'Functional nutritionist and author',
+		doing: 'Panel',
+		blurb:
+			"A former physiotherapist who specialised in women's health, with a Master's in nutrition from the University of Bristol. Pauline is a best-selling author, a Fellow of the National Centre for Integrative Medicine and co-founder of Sow & Arrow, and turns complex science into practical habits.",
+		url: ''
+	},
+	{
+		slug: 'ruth-bradbrook',
+		name: 'Ruth Bradbrook',
+		role: 'Yoga teacher and soul midwife',
+		doing: 'Yoga',
+		blurb:
+			'For Ruth, yoga is a way of life rather than an hour on the mat. Rooted in ritual and presence, she holds space for deep rest and reconnection - somewhere to pause, breathe and remember your wholeness.',
+		url: ''
+	},
+	{
+		slug: 'ellen-szide',
+		name: 'Ellen Szide',
+		role: 'Medical herbalist',
+		doing: 'Talk',
+		blurb:
+			'Ellen runs Holos Herbal Practice in east Bristol, and this talk introduces the herbs that can help with common menopausal symptoms - hot flushes, poor sleep, brain fog, anxiety and low energy.',
+		url: ''
+	},
+	{
+		slug: 'izabella-collins',
+		name: 'Izabella Collins',
+		role: 'Kundalini yoga teacher and kinesiologist',
+		doing: 'Kundalini yoga',
+		blurb:
+			"A holistic wellness practitioner focused on women's hormones and restoring balance naturally. Izabella weaves together bodywork, kinesiology, somatic practice and nervous system regulation to help women release stored stress and reconnect with the wisdom of their bodies.",
+		url: ''
+	},
+	{
+		slug: 'jo-ocallaghan',
+		name: "Jo O'Callaghan",
+		role: 'Founder of Pill Community Circuits',
+		doing: 'Circuit training',
+		blurb:
+			"Fitness has been Jo's best friend for more than 25 years, including through ten years of her own perimenopause. She has run Pill Community Circuits for over four years, and brings tips for staying strong at home, at the gym or in a class.",
+		url: ''
+	},
+	{
+		slug: 'caroline-pringle',
+		name: 'Caroline Pringle',
+		role: 'Qigong and yoga teacher, nutritionist',
+		doing: 'Qigong',
+		blurb:
+			'Perimenopause knocked Caroline for six at 47, while she was running a company as a single parent. Root and Rise, the practice she built from that, pairs dynamic Chinese exercise with Qigong - gentle strength first, then calm.',
+		url: ''
+	},
+	{
+		slug: 'anastasia-griffith',
+		name: 'Anastasia Griffith',
+		role: 'Trauma-informed EFT practitioner and coach',
+		doing: 'EFT tapping',
+		blurb:
+			'After burning out of a successful acting career in Hollywood, Anastasia set out to understand the perfectionism and people-pleasing behind her own stress-induced early perimenopause. She founded The Cortisol Clinic, and sees menopause as an opportunity, not a curse.',
+		url: ''
+	},
+	{
+		slug: 'fabienne-vailes',
+		name: 'Fabienne Vailes',
+		role: 'Mindfulness teacher, hypnotherapist and author',
+		doing: 'Mindfulness',
+		blurb:
+			'A self-described recovering language teacher and reformed mother. Fabienne wrote The Flourishing Student, co-wrote How to Grow a Grown Up, and founded Flourishing Education. She is also an NLP master practitioner and coach.',
+		url: ''
+	},
+	{
+		slug: 'kessie-may',
+		name: 'Kessie May',
+		role: 'Mindset coach and community builder',
+		doing: 'Mindset and mantras',
+		blurb:
+			'Kessie pairs science-backed approaches to behaviour with intuition and a little magic. Her session, Mindset & Mantras, is a playful, practical look at the voice in your head - and how changing that conversation changes what feels possible.',
+		url: ''
+	},
+	{
+		slug: 'bean-bindloss',
+		name: 'Bean Bindloss',
+		role: 'Nutritional therapist and integrative hypnotist',
+		doing: 'Talk',
+		blurb:
+			'Based in Bruton, Somerset, Bean helps women through perimenopause and hormonal health challenges. Her talk explains what shifting oestrogen does to memory, energy, sleep and weight, with practical ways to support your metabolic health.',
+		url: ''
+	},
+	{
+		slug: 'susie-morris',
+		name: 'Susie Morris',
+		role: 'Transformation coach and nutritional advisor',
+		doing: 'Session',
+		blurb:
+			'Susie helps women who feel overwhelmed or stuck make change through small shifts in state, habits and everyday choices. Expect a fun, practical session, plus a stand with naturally derived skincare and the wholefood supplements she relied on herself.',
+		url: ''
+	},
+	{
+		slug: 'rachel-fleming',
+		name: 'Rachel Fleming',
+		role: 'Contemporary witch and intuitive consultant',
+		doing: 'Talk',
+		blurb:
+			'Rachel guides women through the thresholds of midlife, treating intuition as a compass rather than a luxury. Her session, Menopause: A Spiritual Journey Home, is gentle, mischievous and rooted in cyclical living and a devotion to nature.',
+		url: ''
+	},
+	{
+		slug: 'sheetal-jethwa',
+		name: 'Sheetal Jethwa',
+		role: 'Menopause champion, founder of South Asian Voices Bristol',
+		doing: 'Talk',
+		blurb:
+			'A campaigner and broadcaster currently in perimenopause herself, Sheetal speaks openly about what it does to confidence, relationships and work. She makes the case for representation, and for conversations that put South Asian women at their heart.',
+		url: ''
+	},
+	{
+		slug: 'emily-spillman',
+		name: 'Emily Spillman',
+		role: 'Pelvic health and continence nurse',
+		doing: 'Talk',
+		blurb:
+			'Founder of Holora Health in South Gloucestershire, and in perimenopause herself for most of her thirties. Emily talks openly about pelvic floor, bladder and vaginal health, because no woman should be told midlife symptoms are just something to put up with.',
+		url: ''
+	},
+	{
+		slug: 'sarah-joy-lendon',
+		name: 'Sarah-Joy Lendon',
+		role: 'Oral health coach with a background in dentistry',
+		doing: 'Talk',
+		blurb:
+			'Sarah-Joy supports midlife women dealing with changes in the mouth, which is closely tied to general and mental health. She combines dental knowledge, nutrition and compassionate coaching.',
+		url: ''
+	},
+	{
+		slug: 'sylvie-wicks',
+		name: 'Sylvie Wicks',
+		role: 'Internal Family Systems therapist',
+		doing: 'IFS meditations',
+		blurb:
+			'Sylvie works from a studio in Stoke Bishop, Bristol, and introduces Internal Family Systems - the idea that the mind is a mosaic of parts, none of them bad - with short meditations to start mapping your own.',
 		url: ''
 	}
 ];
@@ -210,18 +373,22 @@ export const timetable = [
 ];
 
 /**
- * PLACEHOLDER: example rows showing how the line-up will read. Replace with real
- * exhibitors as they confirm - an empty array renders a "coming soon" state instead.
+ * Stands confirmed on the organisers' sheet. Several are run by people who also
+ * speak - they keep their card in `speakers` and get a tile here as well. Alex
+ * Francis and Fran O'Connor are stand-only, so they appear here and not above.
+ * An empty array renders a "coming soon" state instead.
  */
 export const exhibitors = [
-	{ name: 'Exhibitor name', category: 'Nutrition', url: '' },
-	{ name: 'Exhibitor name', category: 'Yoga & movement', url: '' },
-	{ name: 'Exhibitor name', category: 'Complementary therapy', url: '' },
-	{ name: 'Exhibitor name', category: 'Sleep & rest', url: '' },
-	{ name: 'Exhibitor name', category: 'Skincare', url: '' },
-	{ name: 'Exhibitor name', category: 'Strength & fitness', url: '' },
-	{ name: 'Exhibitor name', category: 'Counselling', url: '' },
-	{ name: 'Exhibitor name', category: 'Local makers', url: '' }
+	{
+		name: 'Turquoise in Nature',
+		category: 'Body Ballancer treatments with Alex Francis',
+		url: 'https://turquoiseinnature.co.uk'
+	},
+	{ name: 'Caroline Gaskin', category: 'Homeopathy', url: 'https://carolinegaskin.co.uk/' },
+	{ name: 'Noble Naturals', category: 'With Dr Zouë Lloyd-Wright', url: '' },
+	{ name: 'Susie Morris', category: 'Skincare and wholefood supplements', url: '' },
+	{ name: 'Sylvie Wicks', category: 'Internal Family Systems books and cards', url: '' },
+	{ name: "Fran O'Connor", category: 'Life coaching', url: '' }
 ];
 
 /** PLACEHOLDER answers are written as open questions rather than invented facts. */
