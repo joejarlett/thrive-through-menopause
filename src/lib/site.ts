@@ -345,6 +345,15 @@ export const speakers = [
 		blurb:
 			'Sylvie works from a studio in Stoke Bishop, Bristol, and introduces Internal Family Systems - the idea that the mind is a mosaic of parts, none of them bad - with short meditations to start mapping your own.',
 		url: ''
+	},
+	{
+		slug: 'fran-oconnor',
+		name: "Fran O'Connor",
+		role: 'Life coach',
+		doing: 'Talk',
+		blurb:
+			'Fran works with people at a crossroads - a career that no longer fits, or a search for something new to care about. The question underneath it all: are you valuing yourself properly?',
+		url: ''
 	}
 ];
 
@@ -375,7 +384,7 @@ export const timetable = [
 /**
  * Stands confirmed on the organisers' sheet. Several are run by people who also
  * speak - they keep their card in `speakers` and get a tile here as well. Alex
- * Francis and Fran O'Connor are stand-only, so they appear here and not above.
+ * Francis is stand-only, so appears here and not above.
  * An empty array renders a "coming soon" state instead.
  */
 export const exhibitors = [
