@@ -194,24 +194,6 @@ export const speakers = [
 		url: 'https://ncim.org.uk/'
 	},
 	{
-		slug: 'zoue-lloyd-wright',
-		name: 'Dr Zouë Lloyd-Wright',
-		role: 'Integrated and functional medicine doctor',
-		doing: 'Talk and panel',
-		blurb:
-			'More than three decades in practice, spanning naturopathy, clinical nutrition, chiropractic and craniosacral therapy. Her talk, The Journey Home, looks at how hormones, minerals and nutrition connect - and how to nourish the body through midlife.',
-		url: ''
-	},
-	{
-		slug: 'pauline-cox',
-		name: 'Pauline Cox',
-		role: 'Functional nutritionist and author',
-		doing: 'Panel',
-		blurb:
-			"A former physiotherapist who specialised in women's health, with a Master's in nutrition from the University of Bristol. Pauline is a best-selling author, a Fellow of the National Centre for Integrative Medicine and co-founder of Sow & Arrow, and turns complex science into practical habits.",
-		url: ''
-	},
-	{
 		slug: 'ruth-bradbrook',
 		name: 'Ruth Bradbrook',
 		role: 'Yoga teacher and soul midwife',
@@ -394,7 +376,6 @@ export const exhibitors = [
 		url: 'https://turquoiseinnature.co.uk'
 	},
 	{ name: 'Caroline Gaskin', category: 'Homeopathy', url: 'https://carolinegaskin.co.uk/' },
-	{ name: 'Noble Naturals', category: 'With Dr Zouë Lloyd-Wright', url: '' },
 	{ name: 'Susie Morris', category: 'Skincare and wholefood supplements', url: '' },
 	{ name: 'Sylvie Wicks', category: 'Internal Family Systems books and cards', url: '' },
 	{ name: "Fran O'Connor", category: 'Life coaching', url: '' }

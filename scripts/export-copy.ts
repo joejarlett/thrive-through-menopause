@@ -86,7 +86,6 @@ p(
 		'Ruth',
 		'Ellen Szide',
 		'Izabela Collins',
-		'Dr Zoe & Pauline',
 		'Joey',
 		'Alex Francis',
 		'Annastasia',
