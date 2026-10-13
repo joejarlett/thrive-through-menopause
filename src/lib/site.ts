@@ -99,15 +99,6 @@ export const strands = [
  */
 export const speakers = [
 	{
-		slug: 'shona-hirons',
-		name: 'Shona Hirons',
-		role: 'Menopause coach, speaker and author',
-		doing: 'Talk',
-		blurb:
-			'A litigation lawyer for twenty years, Shona came to menopause the hard way - a cycling accident, uterine cancer, and surgical menopause at 44. She now helps women stop fighting their bodies and start working with them.',
-		url: 'https://mindset-in-motion.co.uk'
-	},
-	{
 		slug: 'claire-cohen',
 		name: 'Claire Cohen',
 		role: 'Naturopathic nutritional therapist',
@@ -299,15 +290,6 @@ export const speakers = [
 		doing: 'Talk',
 		blurb:
 			'A campaigner and broadcaster currently in perimenopause herself, Sheetal speaks openly about what it does to confidence, relationships and work. She makes the case for representation, and for conversations that put South Asian women at their heart.',
-		url: ''
-	},
-	{
-		slug: 'emily-spillman',
-		name: 'Emily Spillman',
-		role: 'Pelvic health and continence nurse',
-		doing: 'Talk',
-		blurb:
-			'Founder of Holora Health in South Gloucestershire, and in perimenopause herself for most of her thirties. Emily talks openly about pelvic floor, bladder and vaginal health, because no woman should be told midlife symptoms are just something to put up with.',
 		url: ''
 	},
 	{
